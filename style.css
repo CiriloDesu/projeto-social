@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 
 *{
     margin: 0px;
@@ -40,4 +48,24 @@ iframe#tela{
     left: 23px;
     width: 269px;
     height: 475px;
+}
+
+section#redes-sociais img {
+    box-sizing: border-box;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.596);
+}
+
+section#redes-sociais {
+    text-align: right;
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.616);
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
